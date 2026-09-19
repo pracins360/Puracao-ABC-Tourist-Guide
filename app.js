@@ -324,3 +324,12 @@ if (document.getElementById("wallet-title")) {
     document.getElementById("wallet-content").style.display = "none";
   }
 }
+psoc_title: "PSOC Personal Guide",
+psoc_locked_title: "PSOC Locked",
+psoc_locked_desc: "Enter your unlock code to activate the PSOC personal guide.",
+psoc_section1_title: "1. What is PSOC?",
+psoc_section1_text: "PSOC is your personal guide for the ABC islands, offering cultural insights, safety tips, and personalized recommendations.",
+psoc_section2_title: "2. Pricing (Dual Currency)",
+psoc_section2_text: "PSOC costs XCG 50ct per day or US$ 0.30 per day. Pay via wallet or discuss payment with Mr. Purcy.",
+psoc_section3_title: "3. What You Receive",
+psoc_section3_text: "Daily guidance, cultural explanations, safety alerts, and personalized tourist support across Aruba, Bonaire, and Curaçao.",
