@@ -551,3 +551,20 @@ if (document.getElementById("status-title")) {
   document.getElementById("status-wallet-course").innerText =
     `${dictionary[lang].status_wallet_label} ${walletText}`;
 }
+// ------------------------------
+// DONATION SCREEN
+// ------------------------------
+if (document.getElementById("donation-title")) {
+
+  document.getElementById("donation-title").innerText = dictionary[lang].donation_title;
+  document.getElementById("donation-desc").innerText = dictionary[lang].donation_desc;
+
+  document.getElementById("donation-usdt-title").innerText = dictionary[lang].donation_usdt_title;
+  document.getElementById("donation-usdt-text").innerText = dictionary[lang].donation_usdt_text;
+
+  document.getElementById("donation-xcg-title").innerText = dictionary[lang].donation_xcg_title;
+  document.getElementById("donation-xcg-text").innerText = dictionary[lang].donation_xcg_text;
+
+  document.getElementById("donation-contact-title").innerText = dictionary[lang].donation_contact_title;
+  document.getElementById("donation-contact-text").innerText = dictionary[lang].donation_contact_text;
+}
