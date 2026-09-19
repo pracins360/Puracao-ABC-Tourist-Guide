@@ -196,3 +196,27 @@
   background: #f7f7f7;
   border-radius: 10px;
 }
+.emergency-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.emergency-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 10px;
+}
+
+.emergency-box h3 {
+  margin-top: 20px;
+}
+
+.emergency-box p {
+  margin: 8px 0;
+  font-size: 16px;
+}
