@@ -49,6 +49,13 @@ donation_xcg_title: "Donate with XCG",
 donation_xcg_text: "Send XCG to wallet address: XCG-987654321",
 donation_contact_title: "Contact for Help",
 donation_contact_text: "Message Mr. Purcy at +59995120536 for donation assistance.",
+persona_title: "Your Personal Guide",
+persona_section1_title: "Cultural Tips",
+persona_section1_text: "Learn how to greet locals, respect traditions, and enjoy the island safely.",
+persona_section2_title: "Safety Advice",
+persona_section2_text: "Stay aware at night, use trusted drivers, and keep valuables secure.",
+persona_section3_title: "Island Guidance",
+persona_section3_text: "Find the best beaches, food spots, and hidden gems across Curaçao.",
 
   },
   es: {
