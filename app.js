@@ -285,3 +285,12 @@ if (userState.status === "frozen") {
     `;
   }
 }
+wallet_title: "Wallet Course",
+wallet_locked_title: "Course Locked",
+wallet_locked_desc: "Enter your unlock code to access the free 1-hour wallet course.",
+wallet_section1_title: "1. How to Start a Wallet (Metamask)",
+wallet_section1_text: "Download Metamask, create a secure password, and store your recovery phrase offline.",
+wallet_section2_title: "2. How to Fund Your Wallet",
+wallet_section2_text: "Buy USDT or XCG on an exchange and transfer it to your wallet address.",
+wallet_section3_title: "3. How to Pay From Your Wallet",
+wallet_section3_text: "Open your wallet, scan the QR code, confirm the transaction, and wait for approval.",
