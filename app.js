@@ -575,3 +575,19 @@ if (document.getElementById("donation-title")) {
   document.getElementById("donation-contact-title").innerText = dictionary[lang].donation_contact_title;
   document.getElementById("donation-contact-text").innerText = dictionary[lang].donation_contact_text;
 }
+// ------------------------------
+// PERSONA INTERACTION SCREEN
+// ------------------------------
+if (document.getElementById("persona-title")) {
+
+  document.getElementById("persona-title").innerText = dictionary[lang].persona_title;
+
+  document.getElementById("persona-section1-title").innerText = dictionary[lang].persona_section1_title;
+  document.getElementById("persona-section1-text").innerText = dictionary[lang].persona_section1_text;
+
+  document.getElementById("persona-section2-title").innerText = dictionary[lang].persona_section2_title;
+  document.getElementById("persona-section2-text").innerText = dictionary[lang].persona_section2_text;
+
+  document.getElementById("persona-section3-title").innerText = dictionary[lang].persona_section3_title;
+  document.getElementById("persona-section3-text").innerText = dictionary[lang].persona_section3_text;
+}
