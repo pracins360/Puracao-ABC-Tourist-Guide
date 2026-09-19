@@ -610,3 +610,28 @@ if (document.getElementById("persona-title")) {
   document.getElementById("persona-section3-title").innerText = dictionary[lang].persona_section3_title;
   document.getElementById("persona-section3-text").innerText = dictionary[lang].persona_section3_text;
 }
+// ------------------------------
+// EMERGENCY HELP SCREEN
+// ------------------------------
+if (document.getElementById("emergency-title")) {
+
+  document.getElementById("emergency-title").innerText = dictionary[lang].emergency_title;
+
+  document.getElementById("emergency-police-title").innerText = dictionary[lang].emergency_police_title;
+  document.getElementById("emergency-police-text").innerText = dictionary[lang].emergency_police_text;
+
+  document.getElementById("emergency-ambulance-title").innerText = dictionary[lang].emergency_ambulance_title;
+  document.getElementById("emergency-ambulance-text").innerText = dictionary[lang].emergency_ambulance_text;
+
+  document.getElementById("emergency-fire-title").innerText = dictionary[lang].emergency_fire_title;
+  document.getElementById("emergency-fire-text").innerText = dictionary[lang].emergency_fire_text;
+
+  document.getElementById("emergency-tourist-title").innerText = dictionary[lang].emergency_tourist_title;
+  document.getElementById("emergency-tourist-text").innerText = dictionary[lang].emergency_tourist_text;
+
+  document.getElementById("emergency-purcy-title").innerText = dictionary[lang].emergency_purcy_title;
+  document.getElementById("emergency-purcy-text").innerText = dictionary[lang].emergency_purcy_text;
+
+  document.getElementById("emergency-safety-title").innerText = dictionary[lang].emergency_safety_title;
+  document.getElementById("emergency-safety-text").innerText = dictionary[lang].emergency_safety_text;
+}
