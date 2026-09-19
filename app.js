@@ -75,6 +75,34 @@ emergency_purcy_text: "For urgent help or guidance, call or WhatsApp +5999512053
 
 emergency_safety_title: "Safety Tips",
 emergency_safety_text: "Stay in well-lit areas, use trusted drivers, keep valuables secure, and avoid isolated locations at night.",
+events_title: "Island Events",
+events_list: [
+  {
+    name: "Mambo Beach Party",
+    date: "Every Friday",
+    desc: "Live DJs, cocktails, and sunset vibes at Mambo Beach."
+  },
+  {
+    name: "Punda Vibes",
+    date: "Every Thursday",
+    desc: "Street festival with music, food, art, and local culture."
+  },
+  {
+    name: "Full Moon Party",
+    date: "Monthly",
+    desc: "Beach celebration with fire shows and live performances."
+  },
+  {
+    name: "Carnival Parade",
+    date: "February",
+    desc: "Colorful costumes, music, and dancing across Willemstad."
+  },
+  {
+    name: "Kaya Kaya Street Festival",
+    date: "August",
+    desc: "Community event with art, food, and live bands."
+  }
+]
 
   },
   es: {
