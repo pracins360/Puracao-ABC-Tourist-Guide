@@ -684,3 +684,40 @@ if (document.getElementById("events-title")) {
     container.appendChild(div);
   });
 }
+// ------------------------------
+// MAIN MENU BUTTON LINKS
+// ------------------------------
+if (document.getElementById("btn-locations")) {
+
+  document.getElementById("btn-locations").onclick = () => {
+    window.location.href = "locations.html";
+  };
+
+  document.getElementById("btn-transport").onclick = () => {
+    window.location.href = "transport.html";
+  };
+
+  document.getElementById("btn-culture").onclick = () => {
+    window.location.href = "culture.html"; // optional future screen
+  };
+
+  document.getElementById("btn-psoc").onclick = () => {
+    window.location.href = "psoc.html";
+  };
+
+  document.getElementById("btn-wallet-course").onclick = () => {
+    window.location.href = "wallet-course.html";
+  };
+
+  document.getElementById("btn-recommend").onclick = () => {
+    window.location.href = "recommend.html"; // optional future screen
+  };
+
+  document.getElementById("btn-status").onclick = () => {
+    window.location.href = "status.html";
+  };
+
+  document.getElementById("btn-unlock").onclick = () => {
+    window.location.href = "unlock.html";
+  };
+}
