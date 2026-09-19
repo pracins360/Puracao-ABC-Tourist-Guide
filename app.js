@@ -663,3 +663,24 @@ if (document.getElementById("emergency-title")) {
   document.getElementById("emergency-safety-title").innerText = dictionary[lang].emergency_safety_title;
   document.getElementById("emergency-safety-text").innerText = dictionary[lang].emergency_safety_text;
 }
+// ------------------------------
+// ISLAND EVENTS SCREEN
+// ------------------------------
+if (document.getElementById("events-title")) {
+
+  document.getElementById("events-title").innerText = dictionary[lang].events_title;
+
+  const list = dictionary[lang].events_list;
+  const container = document.getElementById("events-list");
+
+  list.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "event-item";
+    div.innerHTML = `
+      <strong>${item.name}</strong><br>
+      <em>${item.date}</em><br>
+      ${item.desc}
+    `;
+    container.appendChild(div);
+  });
+}
