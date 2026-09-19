@@ -272,6 +272,22 @@ frozen_contact: "Neem contact op met meneer Purcy via +59995120536 om verder te 
 // LOAD LANGUAGE
 // ------------------------------
 const lang = localStorage.getItem("language") || "en";
+// ------------------------------
+// MAIN MENU TEXT LOADER
+// ------------------------------
+if (document.getElementById("menu-title")) {
+
+  document.getElementById("menu-title").innerText = dictionary[lang].menu_title;
+
+  document.getElementById("btn-locations").innerText = dictionary[lang].menu_locations;
+  document.getElementById("btn-transport").innerText = dictionary[lang].menu_transport;
+  document.getElementById("btn-culture").innerText = dictionary[lang].menu_culture;
+  document.getElementById("btn-psoc").innerText = dictionary[lang].menu_psoc;
+  document.getElementById("btn-wallet-course").innerText = dictionary[lang].menu_wallet_course;
+  document.getElementById("btn-recommend").innerText = dictionary[lang].menu_recommend;
+  document.getElementById("btn-status").innerText = dictionary[lang].menu_status;
+  document.getElementById("btn-unlock").innerText = dictionary[lang].menu_unlock;
+}
 
 
 // ------------------------------
