@@ -44,3 +44,32 @@
   text-decoration: none;
   color: #0077ff;
 }
+.wallet-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+}
+
+.wallet-box {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 10px;
+}
+
+.unlock-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #0077ff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.unlock-link:hover {
+  background: #005fcc;
+}
