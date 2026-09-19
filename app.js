@@ -103,6 +103,15 @@ events_list: [
     desc: "Community event with art, food, and live bands."
   }
 ]
+menu_title: "Main Menu",
+menu_locations: "Tourist Locations",
+menu_transport: "Transport Directory",
+menu_culture: "Local Culture",
+menu_psoc: "PSOC Personal Guide",
+menu_wallet_course: "Wallet Course",
+menu_recommend: "Recommend Drivers/Places",
+menu_status: "Account Status",
+menu_unlock: "Enter Unlock Code",
 
   },
   es: {
