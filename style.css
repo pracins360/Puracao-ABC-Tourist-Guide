@@ -1,0 +1,46 @@
+.unlock-container {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+#unlock-input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#unlock-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#unlock-btn:hover {
+  background: #005fcc;
+}
+
+#unlock-status {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #333;
+}
+
+.back-link {
+  display: block;
+  margin-top: 25px;
+  text-decoration: none;
+  color: #0077ff;
+}
