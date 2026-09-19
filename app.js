@@ -333,3 +333,33 @@ psoc_section2_title: "2. Pricing (Dual Currency)",
 psoc_section2_text: "PSOC costs XCG 50ct per day or US$ 0.30 per day. Pay via wallet or discuss payment with Mr. Purcy.",
 psoc_section3_title: "3. What You Receive",
 psoc_section3_text: "Daily guidance, cultural explanations, safety alerts, and personalized tourist support across Aruba, Bonaire, and Curaçao.",
+// ------------------------------
+// PSOC MODULE
+// ------------------------------
+if (document.getElementById("psoc-title")) {
+
+  const state = loadUserState();
+
+  // Load multilingual text
+  document.getElementById("psoc-title").innerText = dictionary[lang].psoc_title;
+  document.getElementById("psoc-locked-title").innerText = dictionary[lang].psoc_locked_title;
+  document.getElementById("psoc-locked-desc").innerText = dictionary[lang].psoc_locked_desc;
+
+  document.getElementById("psoc-section1-title").innerText = dictionary[lang].psoc_section1_title;
+  document.getElementById("psoc-section1-text").innerText = dictionary[lang].psoc_section1_text;
+
+  document.getElementById("psoc-section2-title").innerText = dictionary[lang].psoc_section2_title;
+  document.getElementById("psoc-section2-text").innerText = dictionary[lang].psoc_section2_text;
+
+  document.getElementById("psoc-section3-title").innerText = dictionary[lang].psoc_section3_title;
+  document.getElementById("psoc-section3-text").innerText = dictionary[lang].psoc_section3_text;
+
+  // Lock/unlock logic
+  if (state.psoc === true) {
+    document.getElementById("psoc-locked").style.display = "none";
+    document.getElementById("psoc-content").style.display = "block";
+  } else {
+    document.getElementById("psoc-locked").style.display = "block";
+    document.getElementById("psoc-content").style.display = "none";
+  }
+}
