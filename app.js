@@ -155,3 +155,133 @@ if (document.getElementById("menu-title")) {
 if (document.getElementById("welcome")) {
   document.getElementById("welcome").innerText = dictionary[lang].welcome;
 }
+// ------------------------------------------------------
+// TRIAL → FREEZE → UNLOCK SYSTEM
+// ------------------------------------------------------
+
+// Load or initialize user state
+function loadUserState() {
+  const state = localStorage.getItem("userState");
+  if (state) return JSON.parse(state);
+
+  // First-time user → start trial
+  const newState = {
+    status: "trial",
+    start_date: new Date().toISOString(),
+    duration: null,
+    expires: null,
+    approved_by: null,
+    psoc: false,
+    wallet_course_unlocked: false
+  };
+
+  localStorage.setItem("userState", JSON.stringify(newState));
+  return newState;
+}
+
+function saveUserState(state) {
+  localStorage.setItem("userState", JSON.stringify(state));
+}
+
+// Calculate days between two dates
+function daysBetween(start, end) {
+  const s = new Date(start);
+  const e = new Date(end);
+  return Math.floor((e - s) / (1000 * 60 * 60 * 24));
+}
+
+// Check trial expiration
+function checkTrial(state) {
+  if (state.status !== "trial") return state;
+
+  const today = new Date();
+  const usedDays = daysBetween(state.start_date, today);
+
+  if (usedDays >= 3) {
+    state.status = "frozen";
+    state.reason = "trial_expired";
+    saveUserState(state);
+  }
+
+  return state;
+}
+
+// Check paid duration expiration
+function checkExpiration(state) {
+  if (state.status !== "active") return state;
+  if (!state.expires) return state;
+
+  const today = new Date();
+  const expiry = new Date(state.expires);
+
+  if (today >= expiry) {
+    state.status = "frozen";
+    state.reason = "duration_expired";
+    saveUserState(state);
+  }
+
+  return state;
+}
+
+// Unlock code processor
+function processUnlockCode(code) {
+  const state = loadUserState();
+
+  if (!code.startsWith("PURA-")) {
+    alert("Invalid code");
+    return;
+  }
+
+  // Extract duration from code
+  const durationMatch = code.match(/(\d+)DAY/);
+  if (durationMatch) {
+    const duration = parseInt(durationMatch[1]);
+    const expires = new Date();
+    expires.setDate(expires.getDate() + duration);
+
+    state.status = "active";
+    state.duration = duration;
+    state.expires = expires.toISOString();
+    state.approved_by = "Purcy";
+  }
+
+  // Wallet course unlock
+  if (code.includes("WALLETCOURSE")) {
+    state.wallet_course_unlocked = true;
+  }
+
+  // PSOC activation
+  if (code.includes("PSOC")) {
+    state.psoc = true;
+  }
+
+  saveUserState(state);
+  alert("Unlocked successfully!");
+  window.location.reload();
+}
+
+// Attach unlock button logic (main.html)
+if (document.getElementById("unlock-input")) {
+  document.getElementById("unlock-btn").addEventListener("click", () => {
+    const code = document.getElementById("unlock-input").value.trim();
+    processUnlockCode(code);
+  });
+}
+
+// Run state checks on page load
+let userState = loadUserState();
+userState = checkTrial(userState);
+userState = checkExpiration(userState);
+saveUserState(userState);
+
+// Display frozen message if needed
+if (userState.status === "frozen") {
+  const msg = document.getElementById("frozen-message");
+  if (msg) {
+    msg.innerHTML = `
+      <h3>Your access is frozen</h3>
+      <p>Reason: ${userState.reason}</p>
+      <p>Contact Mr. Purcy: 59995120536</p>
+    `;
+  }
+}
