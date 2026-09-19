@@ -294,3 +294,33 @@ wallet_section2_title: "2. How to Fund Your Wallet",
 wallet_section2_text: "Buy USDT or XCG on an exchange and transfer it to your wallet address.",
 wallet_section3_title: "3. How to Pay From Your Wallet",
 wallet_section3_text: "Open your wallet, scan the QR code, confirm the transaction, and wait for approval.",
+// ------------------------------
+// WALLET COURSE MODULE
+// ------------------------------
+if (document.getElementById("wallet-title")) {
+
+  const state = loadUserState();
+
+  // Load multilingual text
+  document.getElementById("wallet-title").innerText = dictionary[lang].wallet_title;
+  document.getElementById("wallet-locked-title").innerText = dictionary[lang].wallet_locked_title;
+  document.getElementById("wallet-locked-desc").innerText = dictionary[lang].wallet_locked_desc;
+
+  document.getElementById("wallet-section1-title").innerText = dictionary[lang].wallet_section1_title;
+  document.getElementById("wallet-section1-text").innerText = dictionary[lang].wallet_section1_text;
+
+  document.getElementById("wallet-section2-title").innerText = dictionary[lang].wallet_section2_title;
+  document.getElementById("wallet-section2-text").innerText = dictionary[lang].wallet_section2_text;
+
+  document.getElementById("wallet-section3-title").innerText = dictionary[lang].wallet_section3_title;
+  document.getElementById("wallet-section3-text").innerText = dictionary[lang].wallet_section3_text;
+
+  // Lock/unlock logic
+  if (state.wallet_course_unlocked === true) {
+    document.getElementById("wallet-locked").style.display = "none";
+    document.getElementById("wallet-content").style.display = "block";
+  } else {
+    document.getElementById("wallet-locked").style.display = "block";
+    document.getElementById("wallet-content").style.display = "none";
+  }
+}
