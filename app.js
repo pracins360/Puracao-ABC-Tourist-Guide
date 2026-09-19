@@ -56,6 +56,25 @@ persona_section2_title: "Safety Advice",
 persona_section2_text: "Stay aware at night, use trusted drivers, and keep valuables secure.",
 persona_section3_title: "Island Guidance",
 persona_section3_text: "Find the best beaches, food spots, and hidden gems across Curaçao.",
+emergency_title: "Emergency Help",
+
+emergency_police_title: "Police",
+emergency_police_text: "Call 911 or +5999 917 for immediate police assistance.",
+
+emergency_ambulance_title: "Ambulance",
+emergency_ambulance_text: "Call 912 for medical emergencies.",
+
+emergency_fire_title: "Fire Department",
+emergency_fire_text: "Call 911 or +5999 488 8888 for fire emergencies.",
+
+emergency_tourist_title: "Tourist Emergency Hotline",
+emergency_tourist_text: "Call +5999 462 1233 for tourist support and urgent help.",
+
+emergency_purcy_title: "Contact Mr. Purcy",
+emergency_purcy_text: "For urgent help or guidance, call or WhatsApp +59995120536.",
+
+emergency_safety_title: "Safety Tips",
+emergency_safety_text: "Stay in well-lit areas, use trusted drivers, keep valuables secure, and avoid isolated locations at night.",
 
   },
   es: {
