@@ -1,3 +1,6 @@
+// ------------------------------
+// LANGUAGE SELECTOR LOGIC
+// ------------------------------
 document.querySelectorAll(".lang-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const selected = btn.getAttribute("data-lang");
@@ -7,8 +10,14 @@ document.querySelectorAll(".lang-btn").forEach(btn => {
     window.location.href = "main.html";
   });
 });
+
+
+// ------------------------------
+// MULTILINGUAL DICTIONARY
+// ------------------------------
 const dictionary = {
   en: {
+    welcome: "Welcome to PuraCao",
     menu_title: "Main Menu",
     locations: "Tourist Locations",
     transport: "Transport Directory",
@@ -20,6 +29,7 @@ const dictionary = {
     unlock: "Enter Unlock Code"
   },
   es: {
+    welcome: "Bienvenido a PuraCao",
     menu_title: "Menú Principal",
     locations: "Lugares Turísticos",
     transport: "Directorio de Transporte",
@@ -31,6 +41,7 @@ const dictionary = {
     unlock: "Ingresar Código"
   },
   pap: {
+    welcome: "Bon bini na PuraCao",
     menu_title: "Menu Prinsipal",
     locations: "Luganan Turístiko",
     transport: "Direktorio di Transporte",
@@ -42,6 +53,7 @@ const dictionary = {
     unlock: "Hinka Kódigo"
   },
   pt: {
+    welcome: "Bem-vindo ao PuraCao",
     menu_title: "Menu Principal",
     locations: "Locais Turísticos",
     transport: "Diretório de Transporte",
@@ -53,6 +65,7 @@ const dictionary = {
     unlock: "Inserir Código"
   },
   de: {
+    welcome: "Willkommen bei PuraCao",
     menu_title: "Hauptmenü",
     locations: "Touristenorte",
     transport: "Transportverzeichnis",
@@ -64,6 +77,7 @@ const dictionary = {
     unlock: "Code Eingeben"
   },
   fr: {
+    welcome: "Bienvenue à PuraCao",
     menu_title: "Menu Principal",
     locations: "Lieux Touristiques",
     transport: "Annuaire de Transport",
@@ -75,6 +89,7 @@ const dictionary = {
     unlock: "Entrer le Code"
   },
   it: {
+    welcome: "Benvenuto a PuraCao",
     menu_title: "Menu Principale",
     locations: "Luoghi Turistici",
     transport: "Directory Trasporti",
@@ -86,6 +101,7 @@ const dictionary = {
     unlock: "Inserisci Codice"
   },
   fil: {
+    welcome: "Maligayang pagdating sa PuraCao",
     menu_title: "Pangunahing Menu",
     locations: "Mga Lugar na Panturista",
     transport: "Direktoryo ng Transportasyon",
@@ -97,6 +113,7 @@ const dictionary = {
     unlock: "Ilagay ang Code"
   },
   nl: {
+    welcome: "Welkom bij PuraCao",
     menu_title: "Hoofdmenu",
     locations: "Toeristische Locaties",
     transport: "Transportgids",
@@ -108,27 +125,33 @@ const dictionary = {
     unlock: "Code Invoeren"
   }
 };
+
+
+// ------------------------------
+// LOAD LANGUAGE
+// ------------------------------
 const lang = localStorage.getItem("language") || "en";
 
-document.getElementById("menu-title").innerText = dictionary[lang].menu_title;
-document.getElementById("btn-locations").innerText = dictionary[lang].locations;
-document.getElementById("btn-transport").innerText = dictionary[lang].transport;
-document.getElementById("btn-culture").innerText = dictionary[lang].culture;
-document.getElementById("btn-psoc").innerText = dictionary[lang].psoc;
-document.getElementById("btn-wallet-course").innerText = dictionary[lang].wallet_course;
-document.getElementById("btn-recommend").innerText = dictionary[lang].recommend;
-document.getElementById("btn-status").innerText = dictionary[lang].status;
-document.getElementById("btn-unlock").innerText = dictionary[lang].unlock;
-const dictionary = {
-  en: { welcome: "Welcome to PuraCao" },
-  es: { welcome: "Bienvenido a PuraCao" },
-  pap: { welcome: "Bon bini na PuraCao" },
-  pt: { welcome: "Bem-vindo ao PuraCao" },
-  de: { welcome: "Willkommen bei PuraCao" },
-  fr: { welcome: "Bienvenue à PuraCao" },
-  it: { welcome: "Benvenuto a PuraCao" },
-  fil: { welcome: "Maligayang pagdating sa PuraCao" },
-  nl: { welcome: "Welkom bij PuraCao" }
-};
-const lang = localStorage.getItem("language") || "en";
-document.getElementById("welcome").innerText = dictionary[lang].welcome;
+
+// ------------------------------
+// LOAD MAIN MENU TEXT
+// ------------------------------
+if (document.getElementById("menu-title")) {
+  document.getElementById("menu-title").innerText = dictionary[lang].menu_title;
+  document.getElementById("btn-locations").innerText = dictionary[lang].locations;
+  document.getElementById("btn-transport").innerText = dictionary[lang].transport;
+  document.getElementById("btn-culture").innerText = dictionary[lang].culture;
+  document.getElementById("btn-psoc").innerText = dictionary[lang].psoc;
+  document.getElementById("btn-wallet-course").innerText = dictionary[lang].wallet_course;
+  document.getElementById("btn-recommend").innerText = dictionary[lang].recommend;
+  document.getElementById("btn-status").innerText = dictionary[lang].status;
+  document.getElementById("btn-unlock").innerText = dictionary[lang].unlock;
+}
+
+
+// ------------------------------
+// LOAD WELCOME TEXT (index.html)
+// ------------------------------
+if (document.getElementById("welcome")) {
+  document.getElementById("welcome").innerText = dictionary[lang].welcome;
+}
