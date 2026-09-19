@@ -422,3 +422,29 @@ if (document.getElementById("transport-title")) {
     container.appendChild(div);
   });
 }
+// ------------------------------
+// FROZEN PERSONA SCREEN
+// ------------------------------
+if (document.getElementById("frozen-title")) {
+
+  const state = loadUserState();
+
+  // Load multilingual title
+  document.getElementById("frozen-title").innerText = dictionary[lang].frozen_title;
+
+  // Reason
+  let reasonText = "";
+
+  if (state.reason === "trial_expired") {
+    reasonText = dictionary[lang].frozen_reason_trial;
+  }
+
+  if (state.reason === "duration_expired") {
+    reasonText = dictionary[lang].frozen_reason_duration;
+  }
+
+  document.getElementById("frozen-reason").innerText = reasonText;
+
+  // Contact
+  document.getElementById("frozen-contact").innerText = dictionary[lang].frozen_contact;
+}
