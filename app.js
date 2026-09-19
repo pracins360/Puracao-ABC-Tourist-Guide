@@ -378,3 +378,43 @@ if (document.getElementById("psoc-title")) {
     document.getElementById("psoc-content").style.display = "none";
   }
 }
+// ------------------------------
+// LOCATIONS MODULE
+// ------------------------------
+if (document.getElementById("loc-title")) {
+
+  document.getElementById("loc-title").innerText = dictionary[lang].loc_title;
+
+  const list = dictionary[lang].loc_list;
+  const container = document.getElementById("loc-list");
+
+  list.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "loc-item";
+    div.innerHTML = `<strong>${item.name}</strong><br>${item.desc}`;
+    container.appendChild(div);
+  });
+}
+
+
+// ------------------------------
+// TRANSPORT MODULE
+// ------------------------------
+if (document.getElementById("transport-title")) {
+
+  document.getElementById("transport-title").innerText = dictionary[lang].transport_title;
+
+  const list = dictionary[lang].transport_list;
+  const container = document.getElementById("transport-list");
+
+  list.forEach(item => {
+    const div = document.createElement("div");
+    div.className = "transport-item";
+    div.innerHTML = `
+      <strong>Driver:</strong> ${item.driver}<br>
+      <strong>Route:</strong> ${item.route}<br>
+      <strong>Contact:</strong> ${item.contact}
+    `;
+    container.appendChild(div);
+  });
+}
