@@ -27,6 +27,21 @@ const dictionary = {
     recommend: "Recommend Drivers/Places",
     status: "Account Status",
     unlock: "Enter Unlock Code"
+    status_title: "Account Status",
+status_state_label: "Current status:",
+status_duration_label: "Duration:",
+status_expires_label: "Expires on:",
+status_psoc_label: "PSOC active:",
+status_wallet_label: "Wallet course unlocked:",
+status_state_trial: "Trial",
+status_state_active: "Active",
+status_state_frozen: "Frozen",
+status_state_unknown: "Unknown",
+status_duration_none: "No duration set",
+status_expires_none: "No expiry date",
+status_yes: "Yes",
+status_no: "No",
+
   },
   es: {
     welcome: "Bienvenido a PuraCao",
