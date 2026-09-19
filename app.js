@@ -499,3 +499,47 @@ if (document.getElementById("frozen-title")) {
   // Contact
   document.getElementById("frozen-contact").innerText = dictionary[lang].frozen_contact;
 }
+// ------------------------------
+// ACCOUNT STATUS SCREEN
+// ------------------------------
+if (document.getElementById("status-title")) {
+
+  const state = loadUserState();
+
+  document.getElementById("status-title").innerText = dictionary[lang].status_title;
+
+  // Status
+  let statusText = dictionary[lang].status_state_unknown;
+  if (state.status === "trial") statusText = dictionary[lang].status_state_trial;
+  if (state.status === "active") statusText = dictionary[lang].status_state_active;
+  if (state.status === "frozen") statusText = dictionary[lang].status_state_frozen;
+
+  document.getElementById("status-state").innerText =
+    `${dictionary[lang].status_state_label} ${statusText}`;
+
+  // Duration
+  const durationText = state.duration
+    ? `${state.duration} days`
+    : dictionary[lang].status_duration_none;
+
+  document.getElementById("status-duration").innerText =
+    `${dictionary[lang].status_duration_label} ${durationText}`;
+
+  // Expires
+  const expiresText = state.expires
+    ? new Date(state.expires).toLocaleDateString()
+    : dictionary[lang].status_expires_none;
+
+  document.getElementById("status-expires").innerText =
+    `${dictionary[lang].status_expires_label} ${expiresText}`;
+
+  // PSOC
+  const psocText = state.psoc ? dictionary[lang].status_yes : dictionary[lang].status_no;
+  document.getElementById("status-psoc").innerText =
+    `${dictionary[lang].status_psoc_label} ${psocText}`;
+
+  // Wallet course
+  const walletText = state.wallet_course_unlocked ? dictionary[lang].status_yes : dictionary[lang].status_no;
+  document.getElementById("status-wallet-course").innerText =
+    `${dictionary[lang].status_wallet_label} ${walletText}`;
+}
