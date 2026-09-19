@@ -140,6 +140,10 @@ transport_list: [
   { driver: "Maria", route: "Airport → Hotels → Mambo", contact: "+5999 555 5678" },
   { driver: "Jorge", route: "Westpunt → Lagun → Shete Boka", contact: "+5999 555 9012" }
 ]
+frozen_title: "Access Frozen",
+frozen_reason_trial: "Your free trial has ended.",
+frozen_reason_duration: "Your paid access has expired.",
+frozen_contact: "Contact Mr. Purcy at +59995120536 to continue.",
 
 
 // ------------------------------
