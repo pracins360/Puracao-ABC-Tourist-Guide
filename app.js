@@ -125,6 +125,21 @@ const dictionary = {
     unlock: "Code Invoeren"
   }
 };
+loc_title: "Tourist Locations",
+loc_list: [
+  { name: "Mambo Beach", desc: "Popular beach with restaurants and nightlife." },
+  { name: "Punda", desc: "Historic district with colorful buildings and shops." },
+  { name: "Otrobanda", desc: "Cultural center with local food and markets." },
+  { name: "Shete Boka", desc: "National park with dramatic coastline." },
+  { name: "Playa Lagun", desc: "Quiet beach perfect for snorkeling." }
+],
+
+transport_title: "Transport Directory",
+transport_list: [
+  { driver: "Carlos", route: "Mambo → Punda → Otrobanda", contact: "+5999 555 1234" },
+  { driver: "Maria", route: "Airport → Hotels → Mambo", contact: "+5999 555 5678" },
+  { driver: "Jorge", route: "Westpunt → Lagun → Shete Boka", contact: "+5999 555 9012" }
+]
 
 
 // ------------------------------
